@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  type="application/javascript">
+
+        const personList = [
+            {
+            name : 'Sergio',
+            role: 'teacher',
+            age: 32
+            },
+            {
+            name : 'Pepe',
+            role: 'student',
+            age: 25
+            },
+            {
+            name : 'Antonio',
+            role: 'student',
+            age: 28
+            },
+            {
+            name : 'Maria',
+            role: 'student',
+            age: 22
+            },
+      ];
+
+      function mostrar(){
+      
+        let i = 0;      
+         while (i < personList.length) {   
+              console.log('Nombre:'   ,    personList[i].name  , 'Rol:' ,personList[i].role,   ' Edad: ', personList[i].age    ,    ' años');        
+              i +=1;
+        }
+
+      }
+
+      mostrar();
+      
+      
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
