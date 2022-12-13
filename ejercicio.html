@@ -30,17 +30,52 @@
             },
       ];
 
-      function mostrar(){
-      
-        let i = 0;      
-         while (i < personList.length) {   
-              console.log('Nombre:'   ,    personList[i].name  , 'Rol:' ,personList[i].role,   ' Edad: ', personList[i].age    ,    ' años');        
-              i +=1;
-        }
+      function muestraArray(array){
+        console.log('-- usando FOREACH --');
+
+        // usando una forma de llamar a for each 
+        // array.forEach((person) => console.log('Nombre:', person.name,' Rol:',person.role, ' Edad: ', person.age, 'años'));
+
+        // usando una función más para imprimir
+        // array.forEach((a1) =>printPerson(a1));
+
+        // usando forma resumida de llamar a for each.
+        // se asume que el parámetro que se pasa es cada elemento del array
+        array.forEach(printPerson);
 
       }
 
-      mostrar();
+      // USANDO LA PALABRA FUNCTION
+      // function mostrar(array){      
+      //   console.log('-- usando bucle WHILE --');
+      //   let i = 0;      
+      //    while (i < array.length) {   
+      //         console.log('Nombre:'   ,    array[i].name  , ' Rol:' ,array[i].role,   ' Edad: ', array[i].age    ,    ' años');        
+      //         i +=1;
+      //   }
+      // }
+
+      // SIN USAR LA PALABRA FUNCTION
+      const mostrar=(array)=>{      
+        console.log('-- usando bucle WHILE --');
+        let i = 0;      
+         while (i < array.length) {   
+              console.log('Nombre:'   ,    array[i].name  , ' Rol:' ,array[i].role,   ' Edad: ', array[i].age    ,    ' años');        
+              i +=1;
+        }
+      }
+
+      // pequeña función para sacar por pantalla las propiedades de cada objeto del array
+      const printPerson = (v1)=>{
+        console.log('Nombre:',v1.name);
+        console.log('Rol:',v1.role);
+        console.log('Edad:',v1.age);
+      }
+
+
+      // mostrar(personList);
+      // console.log();
+      muestraArray(personList);
       
       
 

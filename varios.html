@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  type="application/javascript">
+        const personList = [
+            {
+            name : 'Sergio',
+            role: 'teacher',
+            age: 32
+            },
+            {
+            name : 'Pepe',
+            role: 'student',
+            age: 25
+            },
+            {
+            name : 'Antonio',
+            role: 'student',
+            age: 28
+            },
+            {
+            name : 'Maria',
+            role: 'student',
+            age: 22
+            },
+      ];
+
+      let copiaArray = [...personList];
+
+      console.log(copiaArray);
+
+      // destructuring
+      var {
+        name,
+        role,
+      } = personList[0];
+
+      console.log('destructuring:  ','Nombre:', name ,'Rol:',role);      
+
+
+      // spreading
+      
+      const person = {
+        name : 'Sergio',
+        role: 'profe',
+        age: 32,
+        email:'aaaaaa@bbbbb.com',
+        obs:'observaciones'
+      };
+
+      const nPerson = {...person,age: 33, role:'admin', newprop: 'new'};
+      console.log('Spreading ',nPerson );
+
+      console.log("");
+      
+      const newPerson = {...personList[0], age: 33, role:'admin', newprop: 'new'};
+      console.log('Spreading ',newPerson, 'valores', newPerson.name, newPerson.role, newPerson.email, newPerson.age);
+
+      console.log("");
+
+      // destructuring + spreading
+
+      const {email,...resto} = person;
+      console.log('destructuring + spreading', email ,resto);
+
+      console.log("");
+
+      const matrixA = [   [2, 0 ,1],   [3, 0 ,0],   [5, 1 ,1], ]
+      const matrixB = [   [1, 0 ,1],   [1, 2 ,1],   [1, 1 ,0], ]      
+
+
+    </script>
+</head>
+</html>>   

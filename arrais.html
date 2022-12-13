@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  type="application/javascript">
+
+        const miArray = [10,41,125,2,13,32];
+
+        // Realizar una función para encontrar el número más grandeRealizar una función para encontrar los números impares
+
+        const bigger = (array)=>{            
+            mayor=array[0];
+            for(i=0;i<array.length;i++){
+                if (array[i]>mayor){
+                    mayor=array[i];
+                }
+            }
+            return mayor;
+        }
+
+        const bigger_2 = (array)=>{
+            mayor=array[0];
+            array.forEach((a1) =>{
+
+                // if (a1 > mayor){
+                //     mayor=a1;
+                // };
+
+                (a1 > mayor) ? mayor=a1: mayor=mayor ;
+
+            }); 
+            return mayor;
+        };
+
+      
+        const impares = (array)=>{           
+            resultado=[];
+            for(i=0;i<array.length;i++){
+                if (!(array[i]%2===0) ){
+                    resultado.push(array[i]);
+                }
+            }
+            return resultado;
+        }
+
+
+        console.log("el mayor es:",bigger(miArray));
+        console.log("el mayor 2 es:",bigger_2(miArray));
+
+        console.log(impares(miArray));
+
+    </script>
+</head>
+<body>
+</body>
+</html>
